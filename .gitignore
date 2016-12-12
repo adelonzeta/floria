@@ -42,3 +42,4 @@ node_modules
 build
 source/*.html
 source/styles/*.css
+.publish

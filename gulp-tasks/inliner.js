@@ -3,7 +3,7 @@ var styleInject = require('gulp-style-inject');
 var inlineCss   = require('gulp-inline-css');
 var replace     = require('gulp-replace');
 
-var assetsURL = 'https://dl.dropboxusercontent.com/u/26886893/mailbox';
+var assetsURL = 'https://adelonzeta.github.io/floria/assets';
 
 module.exports = function() {
   return gulp.src('source/*.html')
