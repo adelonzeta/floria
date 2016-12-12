@@ -39,4 +39,6 @@ Thumbs.db
 # Folders #
 ###########
 node_modules
-dist
+build
+source/*.html
+source/styles/*.css
