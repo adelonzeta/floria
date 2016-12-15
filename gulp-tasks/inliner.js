@@ -3,7 +3,7 @@ var styleInject = require('gulp-style-inject');
 var inlineCss   = require('gulp-inline-css');
 var replace     = require('gulp-replace');
 
-var assetsURL = 'https://adelonzeta.github.io/floria/assets';
+var assetsURL   = 'https://adelonzeta.github.io/floria/assets';
 
 module.exports = function() {
   return gulp.src('source/*.html')
@@ -14,7 +14,7 @@ module.exports = function() {
       applyWidthAttributes: true,
       applyTableAttributes: true
     }))
-    .pipe(replace(/src="assets/, 'src="' + assetsURL))
+    .pipe(replace(/(?!src=")(assets|..\/assets)/g, assetsURL))
     .pipe(gulp.dest('build'));
 };
 
