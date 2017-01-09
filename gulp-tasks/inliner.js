@@ -6,7 +6,7 @@ var replace     = require('gulp-replace');
 var assetsURL   = 'https://adelonzeta.github.io/floria/assets';
 
 module.exports = function() {
-  return gulp.src('source/*.html')
+  return gulp.src('.build/*.html')
     .pipe(styleInject())
     .pipe(inlineCss({
       applyLinkTags: false,
@@ -15,7 +15,7 @@ module.exports = function() {
       applyTableAttributes: true
     }))
     .pipe(replace(/(?!src=")(assets|..\/assets)/g, assetsURL))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('.build'));
 };
 
 module.exports.dependencies = ['uncss'];

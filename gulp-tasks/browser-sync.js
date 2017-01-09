@@ -2,13 +2,11 @@ var browserSync = require('browser-sync').create();
 
 module.exports = function() {
   browserSync.init({
-    server: 'source',
-    open: false,
-    files: [
-      'source/styles/**/*.scss',
-      'source/{layouts,pages,partials}/**/*.html'
-    ]
+    server: {
+      baseDir: ['.build', 'app']
+    },
+    open: false
   })
 };
 
-module.exports.dependencies = ['sass', 'panini'];
+module.exports.dependencies = ['panini', 'sass'];

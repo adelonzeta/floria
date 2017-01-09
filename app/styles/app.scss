@@ -1,0 +1,41 @@
+@import "utilities/settings"; // Variables
+@import "foundation-emails";
+
+table {
+  .container {
+    background: transparent;
+  }
+  .header {
+    background-color: $primary-color;
+    .headline {
+      text-transform: uppercase;
+      color: $white;
+      font-size: $h3-font-size * 1.618;
+      -webkit-text-stroke: 1px $secondary-color;
+      text-shadow: -2px 2px 0 $secondary-color;
+      letter-spacing: 2px;
+      font-family: Verdana, sans-serif;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+  }
+  .offers {
+    background-color: $white;
+  }
+  .testimonials {
+    background-color: #FDFAF3;
+  }
+  .how-it-works {
+    background-color: $white;
+  }
+  .discover {
+    background-color: #2D2D47;
+  }
+  .footer {
+    background-color: #FCFAF2
+  }
+}
+
+.inline {
+  display: inline-block;
+}

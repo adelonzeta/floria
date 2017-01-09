@@ -2,7 +2,7 @@ var gulp     = require('gulp');
 var imagemin = require('gulp-imagemin');
 
 module.exports = function() {
-  gulp.src('source/assets/**/*')
+  gulp.src('app/assets/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/assets'));
+    .pipe(gulp.dest('.build/assets'));
 };

@@ -1,10 +1,13 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp       = require('gulp');
+var sass       = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 module.exports = function() {
-  return gulp.src('source/styles/*.scss')
+  return gulp.src('app/styles/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['node_modules/foundation-emails/scss']
     }))
-    .pipe(gulp.dest('source/styles'));
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('.build/styles'));
 };

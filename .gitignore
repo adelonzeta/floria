@@ -40,6 +40,5 @@ Thumbs.db
 ###########
 node_modules
 build
-source/*.html
-source/styles/*.css
+.build
 .publish
